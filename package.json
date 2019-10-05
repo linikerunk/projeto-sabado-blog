@@ -1,0 +1,26 @@
+{
+  "name": "projeto-sabado-blog",
+  "version": "1.0.0",
+  "description": "Meu blog usando Node.Js no back-end e reactJS no front-end e futuramente serviço do watson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linikerunk/projeto-sabado-blog.git"
+  },
+  "keywords": [
+    "Node",
+    "node.js",
+    "react",
+    "react.js",
+    "watson"
+  ],
+  "author": "Liniker e Razzini",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linikerunk/projeto-sabado-blog/issues"
+  },
+  "homepage": "https://github.com/linikerunk/projeto-sabado-blog#readme"
+}
