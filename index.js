@@ -1,27 +1,24 @@
-// npm i --save express body-parser
-// create-react-app client   [ cria meu front - end react]
-
-const express = require('express') // aqui estou fazendo uma requisição do meu node module que tem o express
-const bodyParser = require('body-parser') // aqui estou fazendo uma requisição do meu node module que tem o body-parser para pegar dados do tipo POST
+const express = require('express')
+const bodyParser = require('body-parser')
 
 const app = express()
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.urlencoded({ extended: false }))//forma de receber as requisições do tipo POST
 
 
 app.get('/', (req, res) => {
-    res.send('funcionando...')
-})
+    res.send('funcionando')
+})//quando acessar o localhost, a resposta da requisição sera o que esta dentro do parenteses res.send()
 
-const rotas = require('./rotas') // quando começo com . ele  procura no meu diretorio atual
-app.use('/api', rotas)
+const rotas = require('./rotas')//o '.' é para indicar que o arquivo foi criado por mim e não pelo node_modules
+app.use('/api', rotas)//quando acessar o /api ele vai ser direcionado para o rotas
 
-app.use(express.static(__dirname + '/client')) // meu back-end já sabe que existe algo no meu front-end
+app.use(express.static(__dirname + '/client'))//aqui estamos fazendo com que não trate mais como node, dirname resolve todo o caminho do diretório para o caminho atual
 
 
 const port = 3001
 
 app.listen(port, () => {
-    console.log('Servidor está rodando em -> http://localhost:', port)
-})
+    console.log('O servidor esta rodando no link http://localhost:', port)
+})//esculta para saber se o servidor esta executando
